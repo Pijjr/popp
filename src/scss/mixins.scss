@@ -1,0 +1,133 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin gridTablet {
+  display: grid;
+  grid-template-columns: 50% 14% 14% 17%;
+  column-gap: 5px;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  font-size: 14px;
+}
+
+@mixin gridHeader {
+  background-color: $background-main;
+  border-bottom: none;
+  color: $text-grey;
+}
+
+@mixin button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  background-color: $button-color;
+  background-repeat: no-repeat;
+
+  &:hover {
+    opacity: 0.5;
+    transform: all ease 0.5s;
+  }
+}
+
+@mixin greenString-menu {
+  content: '';
+  position: relative;
+  left: -16px;
+  border-left: 8px solid #41f6d7;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 32px;
+  margin-left: 0;
+  @media (min-width: 767px) and (max-width: 1335px) {
+    left: -24px;
+  }
+  @media (min-width: 1337px) {
+    position: relative;
+    left: -15px;
+  }
+}
+
+@mixin greenString-navigation {
+  content: '';
+  position: relative;
+  left: -15px;
+  border-left: 4px solid #41f6d7;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 52px;
+  @media (min-width: 1336px) {
+    position: relative;
+    left: -23px;
+  }
+}
+@mixin greenString-modal {
+  content: '';
+  position: relative;
+  left: -32px;
+  border-left: 4px solid #41f6d7;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 52px;
+}
+
+@mixin textFormatting {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  color: $textColor;
+}
+
+@mixin textGrey {
+  font-family: 'TT Lakes';
+  font-size: 14px;
+  color: $text-grey;
+  font-weight: 500;
+}
+
+@mixin modalTitle {
+  margin: 0;
+  padding: 0;
+  font-family: 'TT Lakes';
+  font-size: 24px;
+  color: $textColor;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+@mixin titleFormatting {
+  font-family: 'TT Lakes';
+  color: $text-grey;
+  height: 100%;
+  background: linear-gradient(-270deg, #f8f8f8 0%, #ffffff 98.61%);
+  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 0;
+}
+
+@mixin repairTitle {
+  font-family: 'TT Lakes';
+  color: $text-grey;
+  height: 100%;
+  background: linear-gradient(-270deg, #f8f8f8 0%, #ffffff 98.61%);
+  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 0;
+
+  @media (max-width: 767px) {
+    padding-left: 13px;
+  }
+
+  @media (min-width: 767px) {
+    padding-left: 24px;
+  }
+}
